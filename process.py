@@ -112,6 +112,20 @@ def process(file):
                     line[8] = 1
                 case "ELO":
                     line[8] = 0
+            LotConfig = [0 for x in range(5)] #One hot encode Lot config
+            match (line[9]):
+                case "Inside":
+                    LotConfig[0] = 1
+                case "Corner":
+                    LotConfig[1] = 1
+                case "CulDSac":
+                    LotConfig[2] = 1
+                case "FR1":
+                    LotConfig[3] = 1
+                case "FR2":
+                    LotConfig[4] = 1
+            line[9] = LotConfig
+        
 
                 
 
