@@ -125,6 +125,65 @@ def process(file):
                 case "FR2":
                     LotConfig[4] = 1
             line[9] = LotConfig
+            match (line[10]): #Ordinal assignment for the Slope of property
+                case "Gtl":
+                    line[10] = 1
+                case "Mod":
+                    line[10] = 2
+                case "Sev":
+                    line[10] = 3
+            Neighbourhood = [0 for x in range(25)]
+            match(line[11]):
+                case "Blmngtn":
+                    Neighbourhood[0] = 1
+                case "Blueste":
+                    Neighbourhood[1] = 1
+                case "BrDale":
+                    Neighbourhood[2] = 1
+                case "BrkSide":
+                    Neighbourhood[3] = 1
+                case "ClearCr":
+                    Neighbourhood[4] = 1
+                case "CollgCr":
+                    Neighbourhood[5] = 1
+                case "Crawfor":
+                    Neighbourhood[6] = 1
+                case "Edwards":
+                    Neighbourhood[7] = 1
+                case "Gilbert":
+                    Neighbourhood[8] = 1
+                case "IDOTRR":
+                    Neighbourhood[9] = 1
+                case "MeadowV":
+                    Neighbourhood[10] =1
+                case "Mitchel":
+                    Neighbourhood[11] = 1
+                case "Names":
+                    Neighbourhood[12] = 1
+                case "NoRidge":
+                    Neighbourhood[13] = 1
+                case "NPkVill":
+                    Neighbourhood[14] = 1
+                case "NridgHt":
+                    Neighbourhood[15] = 1
+                case "NWAmes":
+                    Neighbourhood[16] = 1
+                case "OldTown":
+                    Neighbourhood[17] = 1
+                case "SWISU":
+                    Neighbourhood[18] = 1
+                case "Sawyer":
+                    Neighbourhood[19] = 1
+                case "SawyerW":
+                    Neighbourhood[20] = 1
+                case "Somerst":
+                    Neighbourhood[21] = 1
+                case "StoneBr":
+                    Neighbourhood[22] = 1
+                case "Timber":
+                    Neighbourhood[23] = 1
+                case "Veenker":
+                    Neighbourhood[24] = 1
         
 
                 
